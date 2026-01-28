@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BizEase Design System - Warm, Professional SaaS Aesthetic */
+/* All colors in HSL format */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Warm cream/off-white background */
+    --background: 45 20% 97%;
+    --foreground: 220 20% 15%;
+
+    /* Card surfaces - pure white */
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Primary - Warm Amber/Gold */
+    --primary: 40 90% 50%;
+    --primary-foreground: 220 20% 10%;
+
+    /* Secondary - Soft terracotta/coral */
+    --secondary: 15 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted - Warm gray */
+    --muted: 40 10% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent - Light amber glow */
+    --accent: 45 80% 92%;
+    --accent-foreground: 40 90% 35%;
+
+    /* Destructive - Error red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success green */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning orange */
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Info blue */
+    --info: 210 80% 55%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 40 90% 50%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 15% 35%;
+    --sidebar-primary: 40 90% 50%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 45 80% 92%;
+    --sidebar-accent-foreground: 40 90% 35%;
+    --sidebar-border: 40 15% 90%;
+    --sidebar-ring: 40 90% 50%;
+
+    /* Chart colors */
+    --chart-1: 40 90% 50%;
+    --chart-2: 15 70% 55%;
+    --chart-3: 142 70% 45%;
+    --chart-4: 210 80% 55%;
+    --chart-5: 280 60% 55%;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(40 90% 50%) 0%, hsl(35 95% 60%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(45 80% 92%) 0%, hsl(40 90% 85%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(45 20% 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 20% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 20% 15% / 0.08), 0 2px 4px -2px hsl(220 20% 15% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(220 20% 15% / 0.08), 0 4px 6px -4px hsl(220 20% 15% / 0.05);
+    --shadow-card: 0 2px 8px -2px hsl(220 20% 15% / 0.08), 0 0 0 1px hsl(40 15% 88% / 0.5);
+    --shadow-card-hover: 0 8px 25px -5px hsl(220 20% 15% / 0.12), 0 0 0 1px hsl(40 15% 88% / 0.8);
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 45 20% 95%;
+
+    --card: 220 18% 14%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 220 18% 14%;
+    --popover-foreground: 45 20% 95%;
+
+    --primary: 40 90% 50%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 15 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 40 40% 20%;
+    --accent-foreground: 40 90% 70%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 25 85% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --info: 210 70% 50%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 40 90% 50%;
+
+    --sidebar-background: 220 18% 12%;
+    --sidebar-foreground: 45 15% 75%;
+    --sidebar-primary: 40 90% 50%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 40 40% 20%;
+    --sidebar-accent-foreground: 40 90% 70%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 40 90% 50%;
+
+    --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.3), 0 0 0 1px hsl(220 15% 22%);
+    --shadow-card-hover: 0 8px 25px -5px hsl(0 0% 0% / 0.4), 0 0 0 1px hsl(220 15% 25%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Card with warm shadow */
+  .card-elevated {
+    @apply bg-card rounded-xl border border-border/50;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .card-elevated:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  /* Stat card gradient background */
+  .stat-card {
+    @apply relative overflow-hidden rounded-xl p-5;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Primary gradient button */
+  .btn-gradient {
+    background: var(--gradient-primary);
+    @apply text-primary-foreground font-medium px-4 py-2 rounded-lg;
+    box-shadow: 0 2px 8px -2px hsl(40 90% 50% / 0.4);
+    transition: all 0.2s ease;
+  }
+
+  .btn-gradient:hover {
+    box-shadow: 0 4px 12px -2px hsl(40 90% 50% / 0.5);
+    transform: translateY(-1px);
+  }
+
+  /* Accent highlight background */
+  .bg-accent-glow {
+    background: var(--gradient-warm);
+  }
+
+  /* Sidebar nav item active state */
+  .nav-item-active {
+    @apply bg-accent text-accent-foreground font-medium;
+  }
+
+  /* Table row hover */
+  .table-row-hover:hover {
+    @apply bg-muted/50;
+  }
+
+  /* Status badges */
+  .badge-success {
+    @apply bg-success/10 text-success border border-success/20;
+  }
+
+  .badge-warning {
+    @apply bg-warning/10 text-warning border border-warning/20;
+  }
+
+  .badge-danger {
+    @apply bg-destructive/10 text-destructive border border-destructive/20;
+  }
+
+  .badge-info {
+    @apply bg-info/10 text-info border border-info/20;
+  }
+
+  /* Invoice print styles */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    
+    .print-only {
+      display: block !important;
+    }
+
+    body {
+      background: white !important;
+    }
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
